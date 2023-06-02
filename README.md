@@ -166,7 +166,9 @@ App.jsx
 ```
 
 Adquiri conhecimento sobre o Grid System, que é uma biblioteca utilizada para criar layouts responsivos. Através dela, é possível trabalhar com containers, linhas e colunas, permitindo a organização e disposição dos elementos na página de maneira eficiente. Uma funcionalidade importante é a capacidade de atribuir pesos diferentes para as colunas, com base na largura da tela, possibilitando um ajuste automático e adaptável conforme o dispositivo utilizado.
-
+```
+npm install react-grid-system --save
+```
 ```
    <Container style={{ margin: "auto", padding: '70px 0' }}>
         <Row justify="center">
