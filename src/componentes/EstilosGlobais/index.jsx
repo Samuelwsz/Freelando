@@ -7,6 +7,7 @@ const estilos = (tema) => {
     },
     body: {
       margin: 0,
+     
     },
   }
 }
