@@ -1,7 +1,7 @@
 import styled from "@emotion/styled"
 import { Col, Container, Row } from "react-grid-system"
 import FreelandoLogo from "../Icones/FreelandoLogo"
-import Link from "../Link"
+import Links from "../Links"
 
 const Header = styled.header`
   background: ${(props) => props.theme.cores.primarias.a};
@@ -18,7 +18,7 @@ export default function Cabecalho() {
             <FreelandoLogo />
           </Col>
           <Col style={{ textAlign: "right" }}>
-            <Link>Login</Link>
+            <Links>Login</Links>
           </Col>
         </Row>
       </Container>

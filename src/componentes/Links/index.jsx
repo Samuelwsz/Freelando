@@ -23,7 +23,7 @@ const LinkSecundario = styled.a`
   }
 `
 
-export default function Link({ children, variante = "primario" }) {
+export default function Links({ children, variante = "primario" }) {
   if (variante === "primario") {
     return <LinkPrimario variante={variante}>{children}</LinkPrimario>
   }

@@ -26,11 +26,15 @@ const InputEstilizado = styled.input`
   outline: none;
 `
 
-export default function CampoTexto({ titulo }) {
+export default function CampoTexto({ titulo, valor, onChange, tipo = "text" }) {
   return (
     <LabelEstilizada>
       {titulo}
-      <InputEstilizado />
+      <InputEstilizado
+        value={valor}
+        onChange={(evento) => onChange(evento.target.value)}
+        type={tipo}
+      />
     </LabelEstilizada>
   )
 }

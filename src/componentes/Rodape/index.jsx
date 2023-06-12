@@ -17,8 +17,8 @@ const Footer = styled.footer`
 
 export default function Rodape() {
   return (
-    <Footer >
-      <Container >
+    <Footer>
+      <Container>
         <Row align="center">
           <Col>
             <FreelandoLogo height={40} width={170} />
