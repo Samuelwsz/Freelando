@@ -122,7 +122,7 @@ export default function DadosPessoais() {
           <Row>
             <Col lg={6} md={6} sm={6}>
               <div style={{ textAlign: "left" }}>
-                <Link to="/interesses">
+                <Link to="/selecao/interesses">
                   <Botao variante="secundaria">Anterior</Botao>
                 </Link>
               </div>

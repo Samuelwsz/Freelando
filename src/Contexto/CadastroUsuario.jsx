@@ -101,9 +101,9 @@ export const CadastroUsuarioProvider = ({ children }) => {
     })
   }
   const submeterUsuario = () => {
-    if (usuario.senha.length < 8) {
+  /*  if (usuario.senha.length < 8) {
       return
-    }
+    }*/
     console.log(usuario)
     navegar("/cadastro/concluido")
   }

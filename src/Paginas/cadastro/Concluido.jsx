@@ -1,6 +1,6 @@
 import styled from "@emotion/styled"
 
-import Tipografia from "@/componentes/Tipografia"
+import { FiArrowLeft } from "react-icons/fi"
 
 import Botao from "@/componentes/Botao"
 import ImgConcluido from "/images/imagens-freelando/Imagens/CadastroProntoClienteCrop.png"
@@ -21,14 +21,25 @@ export default function Concluido() {
           mercado!"
       />
 
-      <figure style={{ margin: "0 0 20px 0" }}>
+      <figure
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
         <ImagemEstilizada src={ImgConcluido} alt="imagem de perfil concluido" />
       </figure>
 
       <Row justify="center">
         <Col lg={6} md={6} sm={6} style={{ textAlign: "center" }}>
           <Link to="/">
-            <Botao variante="secundaria">Voltar para home</Botao>
+            <Botao variante="secundaria">
+              <FiArrowLeft
+                style={{ marginRight: "5px", verticalAlign: "middle" }}
+              />
+              Voltar para home
+            </Botao>
           </Link>
         </Col>
       </Row>

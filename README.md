@@ -1,4 +1,4 @@
-<h1>Curso da ALura Freelando, em andamento...</h1>
+<h1>Curso da Alura Freelando, em andamento...</h1>
 
 <h3>Iniciar</h3>
 

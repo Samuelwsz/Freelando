@@ -1,11 +1,11 @@
 import styled from "@emotion/styled"
-
+/* margin-bottom: ${(props) => props.theme.espacamentos.m};*/
 const LabelEstilizada = styled.label`
   display: flex;
   align-items: center;
   font-size: 16px;
   margin-left: ${(props) => props.theme.espacamentos.xs};
-  margin-bottom: ${(props) => props.theme.espacamentos.m};
+
   cursor: pointer;
   padding: ${(props) => props.theme.espacamentos.xs};
   &:hover {

@@ -9,6 +9,7 @@ import Rodape from "../Rodape"
 import DadosPessoais from "../../Paginas/cadastro/DadosPessoais"
 import Interesses from "../../Paginas/cadastro/Interesses"
 import Concluido from "../../Paginas/cadastro/Concluido"
+import PaginaInicial from "../../Paginas/PaginaInicial/PaginaInicial"
 
 export default function AppRoutes() {
   return (
@@ -18,14 +19,12 @@ export default function AppRoutes() {
         <Cabecalho />
         <BrowserRouter>
           <Routes>
+            <Route index element={<PaginaInicial />}></Route>
             <Route path="/" element={<LayoutBaseCadastro />}>
-              <Route index element={<SelecaoCliente />}></Route>
-              <Route path="/interesses" element={<Interesses />}></Route>
+              <Route path="/selecao" element={<SelecaoCliente />}></Route>
+              <Route path="selecao/interesses" element={<Interesses />}></Route>
               <Route path="/dadospessoais" element={<DadosPessoais />}></Route>
-              <Route
-                path="/cadastro/concluido"
-                element={<Concluido />}
-              ></Route>
+              <Route path="/cadastro/concluido" element={<Concluido />}></Route>
             </Route>
           </Routes>
         </BrowserRouter>

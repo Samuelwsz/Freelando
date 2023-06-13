@@ -6,8 +6,7 @@ import { CadastroUsuarioProvider } from "../../Contexto/CadastroUsuario"
 export default function LayoutBaseCadastro() {
   return (
     <>
-      <CadastroUsuarioProvider>
-      
+      <CadastroUsuarioProvider>  
         <Row justify="center" style={{ margin: "auto" }}>
           <Col lg={6} md={8} sm={12} style={{ margin: "80px" }}>
             <Card>

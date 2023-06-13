@@ -43,7 +43,7 @@ export default function Interesses() {
 
   useEffect(() => {
     if (!possoSelecionarInteresse()) {
-      navegar("/")
+      navegar("/selecao")
     }
   }, [navegar, possoSelecionarInteresse])
 
@@ -60,7 +60,7 @@ export default function Interesses() {
         <Row>
           <Col lg={6} md={6} sm={6}>
             <div style={{ textAlign: "left" }}>
-              <Link to="/">
+              <Link to="/selecao">
                 <Botao variante="secundaria">Anterior</Botao>
               </Link>
             </div>
