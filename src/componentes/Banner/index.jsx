@@ -28,9 +28,11 @@ export default function Banner() {
                 interessantes!
               </Tipografia>
             </figcaption>
-            <Link to="/selecao">
-              <Botao>Quero me cadastrar</Botao>
-            </Link>
+            <div style={{ marginBottom: "10px" }}>
+              <Link to="/selecao">
+                <Botao>Quero me cadastrar</Botao>
+              </Link>
+            </div>
           </Col>
           <Col md={7} sm={12}>
             <ImgEstilizado src={imagemBanner} alt="imagem do banner" />

@@ -10,26 +10,27 @@ import DadosPessoais from "../../Paginas/cadastro/DadosPessoais"
 import Interesses from "../../Paginas/cadastro/Interesses"
 import Concluido from "../../Paginas/cadastro/Concluido"
 import PaginaInicial from "../../Paginas/PaginaInicial/PaginaInicial"
+import Pagina404 from "../../Paginas/Erro"
+import Login from "../../Paginas/Login"
 
 export default function AppRoutes() {
   return (
     <>
-      <ProvedorTema>
-        <Estilos />
+      <BrowserRouter>
         <Cabecalho />
-        <BrowserRouter>
-          <Routes>
-            <Route index element={<PaginaInicial />}></Route>
-            <Route path="/" element={<LayoutBaseCadastro />}>
-              <Route path="/selecao" element={<SelecaoCliente />}></Route>
-              <Route path="selecao/interesses" element={<Interesses />}></Route>
-              <Route path="/dadospessoais" element={<DadosPessoais />}></Route>
-              <Route path="/cadastro/concluido" element={<Concluido />}></Route>
-            </Route>
-          </Routes>
-        </BrowserRouter>
+        <Routes>
+          <Route path="/" element={<PaginaInicial />}></Route>
+          <Route path="/login" element={<Login />}></Route>
+          <Route path="/" element={<LayoutBaseCadastro />}>
+            <Route path="/selecao" element={<SelecaoCliente />}></Route>
+            <Route path="selecao/interesses" element={<Interesses />}></Route>
+            <Route path="/dadospessoais" element={<DadosPessoais />}></Route>
+            <Route path="/cadastro/concluido" element={<Concluido />}></Route>
+            <Route path="*" element={<Pagina404 />}></Route>
+          </Route>
+        </Routes>
         <Rodape />
-      </ProvedorTema>
+      </BrowserRouter>
     </>
   )
 }

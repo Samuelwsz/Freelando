@@ -3,6 +3,7 @@ import Card from "@/componentes/Card"
 import Tipografia from "@/componentes/Tipografia"
 import styled from "@emotion/styled"
 
+
 const SpanEstilizado = styled.span`
   color: ${(props) => props.theme.cores.primarias.a};
 `

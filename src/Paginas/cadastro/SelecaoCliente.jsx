@@ -19,11 +19,7 @@ export default function SelecaoCliente() {
         <CabecalhoCadastro subtitulo=" Como podemos te ajudar?" />
         <Row>
           <Col md={6} sm={12}>
-            <Link
-              to="interesses"
-              onClick={() => setPerfil("cliente")}
-              style={{ textDecoration: "none" }}
-            >
+            <Link to="interesses" onClick={() => setPerfil("cliente")}>
               <img src={Cliente} alt="Imagem cliente" />
               <Tipografia variante="body" componente="body">
                 Sou cliente e preciso de um freela!
@@ -41,9 +37,11 @@ export default function SelecaoCliente() {
           <Tipografia variante="body2" componente="body2">
             Já tem conta?
           </Tipografia>
-          <p>
-            <Links variante="secundaria">Faça login!</Links>
-          </p>
+          <Link to="/login">
+            <p>
+              <Links variante="secundaria">Faça login!</Links>
+            </p>
+          </Link>
         </div>
       </div>
     </>

@@ -1,6 +1,8 @@
 import styled from "@emotion/styled"
 import { Col, Container, Row } from "react-grid-system"
 import FreelandoLogo from "../Icones/FreelandoLogo"
+
+import { Link } from "react-router-dom"
 import Links from "../Links"
 
 const Header = styled.header`
@@ -14,11 +16,13 @@ export default function Cabecalho() {
     <Header>
       <Container>
         <Row align="center">
-          <Col> 
+          <Col>
             <FreelandoLogo />
           </Col>
           <Col style={{ textAlign: "right" }}>
-            <Links>Login</Links>
+            <Link to="/login">
+              <Links>Login</Links>
+            </Link>
           </Col>
         </Row>
       </Container>

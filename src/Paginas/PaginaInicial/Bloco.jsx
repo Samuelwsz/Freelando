@@ -4,7 +4,7 @@ import { Row } from "react-grid-system"
 
 const ContainerEstilizado = styled.div`
   text-align: center;
-  padding-top: ${(props) => props.theme.espacamento.s};
+  padding-top: ${(props) => props.theme.espacamentos.s};
 `
 
 export default function Bloco({ titulo, children }) {
