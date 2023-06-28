@@ -8,6 +8,9 @@ import Card from "@/componentes/Card"
 import Tipografia from "@/componentes/Tipografia"
 import CampoTexto from "@/componentes/CampoTexto"
 import Botao from "@/componentes/Botao"
+import { useEffect } from "react"
+import http from "../../http"
+import { ArmazenadorToken } from "../../utils/ArmazenadorToken"
 
 const TituloEstilizado = styled.h1`
   background: url(${imgBanner}) no-repeat;
@@ -25,11 +28,26 @@ const ImgEstilizada = styled.img`
 `
 
 export default function AreaLogada() {
+  const token = ArmazenadorToken.accessToken
+
+  useEffect(() => {
+    http
+      .get("profile", {
+        headers: { Authorization: `Bearer ${token}` },
+      })
+      .then((resposta) => console.log(resposta))
+      .catch((erro) => console.error(erro))
+  }, [])
+
+  const aoSubmeterForm = (evento) => {
+    evento.preventDefault()
+  }
+
   return (
     <>
       <TituloEstilizado>Perfil</TituloEstilizado>
       <Container>
-        <form>
+        <form onSubmit={aoSubmeterForm}>
           <Row>
             <Col sm={12} md={5}>
               <Card>
