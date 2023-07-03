@@ -23,9 +23,26 @@ const LinkSecundario = styled.span`
   }
 `
 
-export default function Links({ children, variante = "primario" }) {
-  if (variante === "primario") {
-    return <LinkPrimario variante={variante}>{children}</LinkPrimario>
+export default function Links({
+  children,
+  variante = "primario",
+  onClick = null,
+}) {
+  const LidarComClick = () => {
+    if (onClick) {
+      onClick()
+    }
   }
-  return <LinkSecundario variante={variante}>{children}</LinkSecundario>
+  if (variante === "primario") {
+    return (
+      <LinkPrimario onClick={LidarComClick} variante={variante}>
+        {children}
+      </LinkPrimario>
+    )
+  }
+  return (
+    <LinkSecundario onClick={LidarComClick} variante={variante}>
+      {children}
+    </LinkSecundario>
+  )
 }

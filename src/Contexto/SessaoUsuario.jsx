@@ -1,4 +1,4 @@
-import { createContext, useContext } from "react"
+import { createContext, useContext, useState } from "react"
 import http from "../http"
 import { ArmazenadorToken } from "../utils/ArmazenadorToken"
 
@@ -14,6 +14,10 @@ export const useSessaoUsuarioContext = () => {
 }
 
 export const SessaoUsuarioProvider = ({ children }) => {
+  const [usuarioEstaLogado, setUsuarioEstaLogado] = useState(
+    !!ArmazenadorToken.accessToken
+  )
+
   const login = (email, senha) => {
     http
       .post("auth/login", {
@@ -25,11 +29,18 @@ export const SessaoUsuarioProvider = ({ children }) => {
           resposta.data.access_token,
           resposta.data.refresh_token
         )
+        setUsuarioEstaLogado(true)
       })
       .catch((erro) => console.error(erro))
   }
 
-  const value = { login }
+  const logout = () => {
+    ArmazenadorToken.efetuarLogout()
+    setUsuarioEstaLogado(false)
+  }
+
+  const value = { login, usuarioEstaLogado, logout }
+
   return (
     <SessaoUsuarioContext.Provider value={value}>
       {children}

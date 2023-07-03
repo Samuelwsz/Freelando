@@ -15,19 +15,19 @@ export default function AppRoutes() {
   return (
     <>
       <BrowserRouter>
-        <Cabecalho />
-        <Routes>
-          <Route path="/" element={<PaginaInicial />}></Route>
-          <Route path="/login" element={<Login />}></Route>
-          <Route path="/arealogada" element={<AreaLogada />}></Route>
-          <Route path="/" element={<LayoutBaseCadastro />}>
-            <Route path="/selecao" element={<SelecaoCliente />}></Route>
-            <Route path="selecao/interesses" element={<Interesses />}></Route>
-            <Route path="/dadospessoais" element={<DadosPessoais />}></Route>
-            <Route path="/cadastro/concluido" element={<Concluido />}></Route>
-            <Route path="*" element={<Pagina404 />}></Route>
-          </Route>
-        </Routes>
+        <Cabecalho />       
+          <Routes>
+            <Route path="/" element={<PaginaInicial />}></Route>
+            <Route path="/login" element={<Login />}></Route>
+            <Route path="/arealogada" element={<AreaLogada />}></Route>
+            <Route path="/" element={<LayoutBaseCadastro />}>
+              <Route path="/selecao" element={<SelecaoCliente />}></Route>
+              <Route path="selecao/interesses" element={<Interesses />}></Route>
+              <Route path="/dadospessoais" element={<DadosPessoais />}></Route>
+              <Route path="/cadastro/concluido" element={<Concluido />}></Route>
+              <Route path="*" element={<Pagina404 />}></Route>
+            </Route>
+          </Routes>     
         <Rodape />
       </BrowserRouter>
     </>

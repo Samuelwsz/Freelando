@@ -5,6 +5,8 @@ import FreelandoLogo from "../Icones/FreelandoLogo"
 import { Link } from "react-router-dom"
 import Links from "../Links"
 
+import { useSessaoUsuarioContext } from "../../Contexto/SessaoUsuario"
+
 const Header = styled.header`
   background: ${(props) => props.theme.cores.primarias.a};
   padding: ${(props) => props.theme.espacamentos.m};
@@ -12,6 +14,8 @@ const Header = styled.header`
 `
 
 export default function Cabecalho() {
+  const { usuarioEstaLogado, logout } = useSessaoUsuarioContext()
+
   return (
     <Header>
       <Container>
@@ -20,9 +24,15 @@ export default function Cabecalho() {
             <FreelandoLogo />
           </Col>
           <Col style={{ textAlign: "right" }}>
-            <Link to="/login">
-              <Links>Login</Links>
-            </Link>
+            {usuarioEstaLogado ? (
+              <Link to='/login'>
+                <Links onClick={logout}>Logout</Links>
+              </Link>
+            ) : (
+              <Link to="/login">
+                <Links>Login</Links>
+              </Link>
+            )}
           </Col>
         </Row>
       </Container>
